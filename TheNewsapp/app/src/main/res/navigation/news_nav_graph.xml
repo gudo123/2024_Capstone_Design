@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/news_nav_graph"
+    app:startDestination="@id/headlinesFragment">
+
+    <!-- HeadlineFragment -->
+    <fragment
+        android:id="@+id/headlinesFragment"
+        android:name="com.example.thenewsapp.ui.fragments.HeadlineFragment"
+        android:label="HeadlinesFragment" >
+        <!-- Headline에서 NewPage로 이동 -->
+        <action
+            android:id="@+id/action_headlineFragment_to_newPageFragment"
+            app:destination="@id/newPageFragment" />
+        <!-- Headline에서 Article로 이동 -->
+        <action
+            android:id="@+id/action_headlineFragment_to_articleFragment"
+            app:destination="@id/articleFragment" />
+        <action
+            android:id="@+id/action_headlinesFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+
+    <!-- ArticleFragment -->
+    <fragment
+        android:id="@+id/articleFragment"
+        android:name="com.example.thenewsapp.ui.fragments.ArticleFragment"
+        android:label="ArticleFragment" >
+        <!-- Article 인자를 받는 argument -->
+        <argument
+            android:name="article"
+            app:argType="com.example.thenewsapp.models.Article" />
+    </fragment>
+
+    <!-- FavouritesFragment -->
+    <fragment
+        android:id="@+id/favouritesFragment"
+        android:name="com.example.thenewsapp.ui.fragments.FavouritesFragment"
+        android:label="FavouritesFragment" >
+        <action
+            android:id="@+id/action_favouritesFragment_to_articleFragment"
+            app:destination="@id/articleFragment" />
+        <action
+            android:id="@+id/action_favouritesFragment_to_headlinesFragment"
+            app:destination="@id/headlinesFragment" />
+        <action
+            android:id="@+id/action_favouritesFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+
+    <!-- SearchFragment -->
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.thenewsapp.ui.fragments.SearchFragment"
+        android:label="SearchFragment" >
+        <action
+            android:id="@+id/action_searchFragment_to_articleFragment"
+            app:destination="@id/articleFragment" />
+        <action
+            android:id="@+id/action_searchFragment_to_headlineFragment2"
+            app:destination="@id/headlinesFragment" />
+        <action
+            android:id="@+id/action_searchFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+
+    <!-- NewPageFragment -->
+    <fragment
+        android:id="@+id/newPageFragment"
+        android:name="com.example.thenewsapp.ui.fragments.NewPageFragment"
+        android:label="New Page">
+        <argument
+            android:name="article"
+            app:argType="com.example.thenewsapp.models.Article" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.thenewsapp.ui.fragments.SettingsFragment"
+        android:label="SettingsFragment">
+    </fragment>
+
+</navigation>

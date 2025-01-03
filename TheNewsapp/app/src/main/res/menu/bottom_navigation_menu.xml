@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/favouritesFragment"
+        android:title="즐겨찾기"
+        android:icon="@drawable/baseline_favorite_24"/>
+    <item
+        android:id="@+id/headlinesFragment"
+        android:title="오늘의 뉴스"
+        android:icon="@drawable/baseline_language_24"/>
+    <item
+        android:id="@+id/searchFragment"
+        android:title="검색"
+        android:icon="@drawable/baseline_search_24"/>
+    <item
+        android:id="@+id/settingsFragment"
+        android:title="환경설정"
+        android:icon="@drawable/baseline_search_24"/>
+</menu>
