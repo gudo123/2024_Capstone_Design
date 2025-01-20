@@ -66,7 +66,6 @@ class NewPageFragment : Fragment() {
                 ) {
                     super.onReceivedError(view, request, error)
 
-                    // 여기에서 수정합니다.
                     activity?.let {
                         Toast.makeText(it, "Failed to load page", Toast.LENGTH_SHORT).show()
                     } ?: run {
