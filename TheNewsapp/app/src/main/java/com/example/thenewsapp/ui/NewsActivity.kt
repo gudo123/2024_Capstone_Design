@@ -1,7 +1,7 @@
 package com.example.thenewsapp.ui
 
 import android.os.Bundle
-import android.view.View // 이 줄을 추가하여 View를 임포트합니다.
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.NavHostFragment
